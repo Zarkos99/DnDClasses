@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 
 class DnDClassListItemActivity : Activity() {
 
@@ -37,6 +38,11 @@ class DnDClassListItemActivity : Activity() {
         m_back_button_view.setOnClickListener {
             val intent = Intent(this@DnDClassListItemActivity, MainActivity::class.java)
             startActivity(intent)
+            Toast.makeText(
+                this,
+                "Successfully returned to list",
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 
